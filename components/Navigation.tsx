@@ -1,52 +1,40 @@
 export default function Navigation() {
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="container">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
+          <a href="/" className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
-            <span className="text-xl font-semibold text-gray-900">
+            <span className="text-lg font-semibold text-gray-900">
               AI Tool Finder
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="/tools" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="/tools" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
               Browse
             </a>
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1">
-                Categories
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-            </div>
-            <a href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="/categories" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
+              Categories
+            </a>
+            <a href="/about" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
               About
             </a>
-            <a href="/how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="/how-it-works" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
               How It Works
             </a>
           </div>
 
-          {/* Search Icon (Desktop) */}
-          <div className="hidden md:block">
-            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-gray-700">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          {/* Search Icon */}
+          <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </button>
         </div>
